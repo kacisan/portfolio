@@ -1,0 +1,95 @@
+/* proměnné v css */
+:root {
+  --black: #282936;
+  --white: #f7f7f7;
+
+  /* velikosti */
+  --kruh: 3rem;
+  --ikona: 2rem;
+
+  /* výpočty */
+  --polovina-kruhu: calc(var(--kruh) / 2);
+  --polovina-ikony: calc(var(--ikona) / 2);
+
+  /* animace */
+  --transition-delka: 0.45s;
+  --transition-easing: ease;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+button {
+  position: relative;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  cursor: pointer;
+  height: var(--kruh);
+}
+
+.text {
+  position: relative;
+  padding-left: var(--kruh);
+  margin-left: 1rem;
+  vertical-align: -webkit-baseline-middle;
+  padding-right: 2rem;
+  color: var(--black);
+  transition: color var(--transition-delka) var(--transition-easing);
+}
+
+.kruh {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--kruh);
+  height: var(--kruh);
+  background-color: var(--black);
+  border-radius: var(--kruh);
+  transition: width var(--transition-delka) var(--transition-easing);
+}
+
+.ikona svg {
+  width: var(--ikona);
+  height: var(--ikona);
+  position: absolute;
+  left: calc(var(--polovina-kruhu) - var(--polovina-ikony));
+  top: calc(var(--polovina-kruhu) - var(--polovina-ikony));
+  margin-left: -0.25rem;
+  transition: margin var(--transition-delka) var(--transition-easing);
+}
+
+.ikona path {
+  fill: var(--white);
+}
+
+.ikona .linka {
+  opacity: 0;
+  transition: opacity var(--transition-delka) var(--transition-easing);
+}
+
+button:hover .kruh {
+  width: 100%;
+}
+
+button:hover .text {
+  color: var(--white);
+}
+
+button:hover .linka {
+  opacity: 1;
+}
+
+button:hover svg {
+  margin-left: 1rem;
+}

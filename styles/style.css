@@ -1,0 +1,275 @@
+body {
+  box-sizing: border-box;
+  background-color: var(--primaryBackground);
+  font-family: "regular", Arial, Helvetica, sans-serif;
+}
+
+header {
+  position: fixed;
+  z-index: 999;
+}
+
+/*Navigation styles*/
+.navbar {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+
+.header.scrolled {
+  background-color: var(--primaryBackground);
+  transition: background-color 0.3s ease;
+}
+
+.nav-link {
+  color: var(--darkGrey);
+}
+
+.brand {
+  margin-top: -0.5em;
+}
+
+/* Main logo default */
+.logo.default {
+  background-image: url("../images/logo_default.svg");
+  width: 9.875em;
+  height: 2.3125em;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*Buttons*/
+.btn {
+  padding: 0.875em 1.5em;
+}
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+  font-family: "extraBold", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.btn-primary:hover {
+  background-color: var(--primaryLight);
+  color: var(--primaryDarkest);
+}
+/*Links*/
+.nav-item .nav-link:hover {
+  color: var(--primary);
+}
+
+a.nav-link.active {
+  color: var(--primary) !important;
+  font-family: "semiBold", Arial, Helvetica, sans-serif;
+}
+
+.intro {
+  vertical-align: center;
+  padding-top: 10%;
+}
+
+.intro-content,
+.about-content {
+  align-content: center;
+}
+
+/* Headlines */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--darkGrey);
+  font-family: "extraBold", Arial, Helvetica, sans-serif;
+}
+
+h1.hero {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+h1 .highlight {
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-family: "semiBold", Arial, Helvetica, sans-serif;
+}
+
+/* Contents */
+
+p.hero {
+  color: var(--grey);
+  font-size: 1.125em;
+  margin-bottom: 2.25em;
+}
+
+p {
+  color: var(--grey);
+}
+
+.my-work,
+.services,
+.about-claim,
+.about-me {
+  margin-top: 8em;
+}
+
+/* Small a větší */
+@media (max-width: 575.98px) {
+  .my-work,
+  .services,
+  .about-claim,
+  .about-me {
+    margin-top: 2em;
+  }
+  .intro-content {
+    margin-top: 2em;
+  }
+}
+@media (min-width: 576px) {
+  .my-work,
+  .services,
+  .about-claim,
+  .about-me {
+    margin-top: 2em;
+  }
+  .intro-content {
+    margin-top: 2em;
+  }
+}
+
+/* Medium a větší */
+@media (min-width: 768px) {
+  .my-work,
+  .services,
+  .about-claim,
+  .about-me {
+    margin-top: 2em;
+  }
+  .intro-content {
+    margin-top: 2em;
+  }
+}
+
+/* Medium a větší */
+@media (min-width: 992px) {
+  .my-work,
+  .services,
+  .about-claim,
+  .about-me {
+    margin-top: 8em;
+  }
+  .intro-content {
+    margin-top: 8em;
+  }
+}
+
+.my-work p {
+  color: var(--grey);
+}
+
+.work-row {
+  margin-bottom: 3em;
+}
+
+.work-item {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+.work-item:hover img {
+  transform: scale(1.5);
+  transition: transform 0.4s ease;
+}
+
+.fields {
+  font-size: 0.75em;
+  color: var(--grey);
+  margin-top: 0.75em;
+}
+
+.work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  /*background: rgba(255, 0, 0, 0.1);*/
+}
+
+.work-item a:focus {
+  border: 2px solid;
+}
+
+.service {
+  background-color: var(--white);
+}
+
+.service h3 {
+  padding: 2em;
+}
+
+footer {
+  background-color: #000000;
+  color: var(--white);
+}
+
+footer h1 {
+  color: var(--white);
+}
+
+footer .container {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+ul {
+  padding: 0;
+}
+footer ul li {
+  list-style-type: none;
+}
+
+.input {
+  background-color: var(--dimGrey);
+  height: 4.875em;
+  border: 0;
+}
+
+/* Chrome, Safari, Opera */
+.input::-webkit-input-placeholder {
+  color: var(--lightGrey);
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+.input::-moz-placeholder {
+  color: var(--lightGrey);
+  opacity: 1;
+}
+
+/* IE 10+ */
+.input:-ms-input-placeholder {
+  color: var(--lightGrey);
+  opacity: 1;
+}
+
+/* Edge */
+.input::-ms-input-placeholder {
+  color: var(--lightGrey);
+  opacity: 1;
+}
+
+/* Standardní */
+.input::placeholder {
+  color: var(--lightGrey);
+  opacity: 1;
+}
